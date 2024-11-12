@@ -7,3 +7,5 @@ while i < len(my_list):
     elif my_list[i] == 0:
         i = i+1
         continue
+    else:
+        break
