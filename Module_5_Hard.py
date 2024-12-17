@@ -4,7 +4,7 @@ class User:
 
     def __init__(self, nickname: str, password: int, age: int):
         self.nickname = nickname
-        self.password = password
+        self.password = hash(password)
         self.age = age
 
     def __str__(self):
@@ -28,7 +28,7 @@ class UrTube:
 
     def log_in(self, nickname, password):
         for user in self.users:
-            if nickname == user.nickname and password == user.password:
+            if nickname == user.nickname and hash(password) == user.password:
                 self.current_user = user
                 return
 
