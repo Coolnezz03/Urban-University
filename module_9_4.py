@@ -13,7 +13,7 @@ def get_advanced_writer(file_name):
     def write_everything(*data_set):
         with open(name, 'w', encoding='utf-8') as file:
             for i in data_set:
-                file.write(str(i))
+                file.write(str(i)+'\n')
         with open(name, 'r', encoding='utf-8') as file:
             pprint(file.read())
     return write_everything
